@@ -3,19 +3,22 @@
 require_relative "../code/pyramid"
 require "test/unit"
 
-class TestPyramid
+class TestPyramid < Test::Unit::TestCase
 
   def test_left
-  # code to execute left_align function
+    expected = "*\n**\n***\n****\n*****"
+    assert_equal(expected,Pyramid.new(5).left_align)
   end
 
   def test_right
-  # code to execute right_align function
+    expected = "    *\n   **\n  ***\n ****\n*****"
+    assert_equal(expected,Pyramid.new(5).right_align)
   end
 
 
   def test_center
-  # code to execute center_align function
+    expected = "    *\n   * *\n  * * *\n * * * *\n* * * * *"
+  assert_equal(expected,Pyramid.new(5).center_align)
   end
 
 end
