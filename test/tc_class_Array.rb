@@ -1,19 +1,22 @@
 # File: tc_class_Array.rb
 
-require_relative "../code/class_Array"
+require_relative "../code/myArray"
 require "test/unit"
 
 class TestArray
 
  def test_frequency
-  #code to execute frequency function
+  expected = "1=>2, "3"=>1, 2=>1"
+  assert_equal(expected, myArray.new("1, "3", 1, 2").frequency)
  end
 
  def test_twice
-  # code to execute twice function
+  expected = "2, 2, 4"
+  assert_equal(expected, myArray.new("1, "3", 1, 2").twice)
  end
 
  def test_join
-  # code to execute join function
+  expected = "1, "3", 1, 2, 4, 5, 6"
+  assert_equal(expected, myArray.new("1, "3", 1, 2").join("4, 5, 6"))
  end
 end
