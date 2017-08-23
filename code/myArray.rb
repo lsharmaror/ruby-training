@@ -7,18 +7,15 @@ class MyArray
  def frequency
   a = Hash.new(0)
   @my.map{ |i| a[i] += 1}
+  a
  end
 
  def twice
-  for i in 0..@my.length
-   if @my(i).is_a?(Numeric)
-    @my(i).map{|a| 2 * a}
-   end
-  end
+   @my.map{ |a| a.is_a?(Numeric)? a * 2 : a }
  end
 
  def join(a)
   @ar = a
-  @my << ", " + a
+  @my.concat(a)
  end
 end
