@@ -24,10 +24,11 @@ class Pyramid
 
   # return center pyramid with n rows
   def center_align
-    pattern = ""
+    pattern = ''
     (1..@rows).each do |row|
-      pattern += (('* ' * row).center(@rows*2).rstrip + "\n")
+      pattern += (('* ' * row).center(@rows * 2).rstrip + "\n")
     end
     pattern.rstrip
   end
+
 end
