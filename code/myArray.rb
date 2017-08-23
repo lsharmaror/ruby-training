@@ -19,6 +19,6 @@ class MyArray
 
  def join(a)
   @ar = a
-  @my.push(a)
+  @my << ", " + a
  end
 end
