@@ -21,7 +21,7 @@ class Pyramid
     end
     pattern.rstrip
   end
-  
+
   # return center pyramid with n rows
   def center_align
     pattern = ''
